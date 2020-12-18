@@ -13,6 +13,7 @@
                         </a>
 
                         <p>{{$post->content}}</p>
+                        <small>{{$post->created_at}}</small>
                     </div>
                 @endforeach
             </div>
