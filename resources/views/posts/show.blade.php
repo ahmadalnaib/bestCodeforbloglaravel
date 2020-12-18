@@ -4,6 +4,8 @@
 @section('content')
 
     <div class="show">
+
+
         <h1>{{$post->title}}</h1>
         <p>{{$post->content}}</p>
     </div>

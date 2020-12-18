@@ -10,6 +10,13 @@
 </head>
 <body>
 @include('layouts.header')
+
+@if(session('status'))
+    <div>
+        {{session('status')}}
+    </div>
+@endif
+
 @yield('content')
 </body>
 </html>

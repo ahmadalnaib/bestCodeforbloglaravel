@@ -47,6 +47,9 @@ class PostController extends Controller
          $path[]='/storage/'.$request->file('image')->store('images',['disk'=>'public']);
      }
 
+     return  redirect()
+         ->route('posts.index')
+         ->with('status','post has been created');
 
     }
 
