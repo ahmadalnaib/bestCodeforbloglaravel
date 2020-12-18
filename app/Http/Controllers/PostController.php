@@ -36,6 +36,17 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+     $this->validate($request,[
+        'title'=>'required|min:2|max:100',
+        'content'=>'required|min:20',
+        'image'=>'mimes:jpeg,bmp,png.jpg|max:3000'
+     ]);
+
+     $path=array();
+     if($request->hasfile('image')){
+         $path[]='/storage/'.$request->file('image')->store('images',['disk'=>'public']);
+     }
+
 
     }
 

@@ -150,3 +150,15 @@ input:focus{
 textarea:focus {
     outline: none;
 }
+
+
+span {
+    display: inline-block;
+    color: red;
+    text-align: center;
+}
+
+
+.red{
+    border-color: red;
+}
