@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background: #4a5568;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+}
+
+ul {
+display: flex;
+}
+
+li a {
+    color: #Fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 10px;
+    padding: 5px;
+
+}
+
+li {
+list-style: none;
+}
+
+.g {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 30px auto;
+    max-width: 1220px;
+    border: 1px solid #ccc;
+    gap: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+.gg{
+    margin: 1rem;
+    padding: 1rem;
+    background: #4a5568;
+    color: #fff;
+    border-radius:5px ;
+}
+
+.gg p, h1 {
+    color: #fff;
+}
+
+.btn:hover{
+    color: orange;
+}
+
+
+
+.show {
+    max-width: 1220px;
+    margin: 30px auto;
+    text-align: center;
+    background: #4a5568;
+    padding: 3rem ;
+}
+
+.show h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: orange;
+    margin: 1rem 0;
+
+}
+
+.show p {
+    color: #fff;
+}
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 1rem;
+}
+
+
+.btn1 {
+
+    background: #4a5568;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem;
+
+}
+
+
+.create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #2d3748;
+    color: #fff;
+}
+
+label {
+    display: block;
+    padding: 1rem;
+    color: #fff;
+}
+
+input,textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius:7px ;
+}
+
+
+button {
+    display: block;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    color: #FFF;
+    background: #4a5568;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover{
+    background: orange;
+    transition: all 1s ease-in;
+    color: #4a5568;
+}
+
+input:focus{
+   outline: none;
+}
+
+textarea:focus {
+    outline: none;
+}
