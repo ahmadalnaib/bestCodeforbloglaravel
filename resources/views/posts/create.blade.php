@@ -8,7 +8,7 @@
             {{--other way to show errors --}}
             @if($errors->any())
                 @foreach($errors->all() as $error)
-                    <p>{{$error}}</p>
+                    <p >{{$error}}</p>
                 @endforeach
                 @endif
             <div>
@@ -27,14 +27,8 @@
                 <span>{{$message}}</span>
                 @enderror
             </div>
-            <div>
-                <label for="image">Image</label>
-                <input type="file" name="image" id="image">
-                @error('image')
-                <span>{{$message}}</span>
-                @enderror
-            </div>
-            <button type="submit">create post</button>
+           
+            <button class="btn" type="submit">create post</button>
         </form>
     </div>
 @endsection

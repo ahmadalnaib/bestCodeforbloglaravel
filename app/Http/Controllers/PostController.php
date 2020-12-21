@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts=Post::all();
+        $posts=Post::latest()->paginate(10);
        return view('posts.index',compact('posts'));
     }
 
@@ -38,19 +38,16 @@ class PostController extends Controller
     {
      $this->validate($request,[
         'title'=>'required|min:2|max:100',
-        'content'=>'required|min:20',
-        'image'=>'mimes:jpeg,bmp,png.jpg|max:3000'
+        'content'=>'required',
+     
      ]);
+      
 
-     $path=array();
-     if($request->hasfile('image')){
-         $path[]='/storage/'.$request->file('image')->store('images',['disk'=>'public']);
-     }
 
-     $post=Post::create([
+     Post::create([
         'title'=>$request->title,
          'content'=>$request->content,
-         'image'=>$request->image
+        
      ]);
 
      return  redirect()
@@ -65,9 +62,9 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show( $id)
+    public function show(Post $post)
     {
-        $post=Post::find($id);
+
         return  view('posts.show',compact('post'));
     }
 
