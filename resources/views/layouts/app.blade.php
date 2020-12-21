@@ -13,9 +13,16 @@
 @include('layouts.header')
 
 @if(session('status'))
-    <div class="status">
-         {{session('status')}}
-    </div>
+
+<div class="flex justify-start status bt-2 mt-2 ">
+    <div class="w-4/12 bg-green-200 p-6 rounded-lg">
+       
+        <p class="text-white-500 mt-2 text-sm">
+            {{session('status')}}
+        </p>   
+       
+   </div>
+    </div> 
 @endif
 <div class="container mx-auto mt-6 px-6">
 
