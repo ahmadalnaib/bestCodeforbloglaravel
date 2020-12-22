@@ -53,7 +53,7 @@ class PostController extends Controller
       
 
 
-     Post::create([
+     $request->user()->posts()->create([
         'title'=>$request->title,
          'content'=>$request->content,
         

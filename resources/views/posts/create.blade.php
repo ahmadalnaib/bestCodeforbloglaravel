@@ -32,7 +32,7 @@
             </div>
            
             <div>
-                <button class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full"  type="submit">Register</button>
+                <button class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full"  type="submit">Create</button>
               </div>
         </form>
     </div>
