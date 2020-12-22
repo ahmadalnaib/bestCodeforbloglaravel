@@ -25,7 +25,10 @@
                     </div>
                 @endforeach
             </div>
-       {{$posts->links()}}
+            <div class="m-3 p-3">
+
+                {{$posts->links()}}
+            </div>
                 @else
                 <div class="w-6/12 bg-white p-6 rounded-lg">
                     <p>There are no posts</p>
