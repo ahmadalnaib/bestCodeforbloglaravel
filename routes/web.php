@@ -44,7 +44,7 @@ Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')
      Route::get('/{post}',[PostController::class,'show'])->name('posts.show');
      Route::post('/',[PostController::class,'store'])->name('posts.store');
 
-     Route::get('/delete',[PostController::class,'destroy'])->name('posts.delete');
+     Route::delete('/{post}',[PostController::class,'destroy'])->name('posts.delete');
 
 
  }));

@@ -2,7 +2,7 @@
 
 
 @section('content')
-
+<a class="text-blue-500 bg-blue-200 py-1 px-3" href="{{route('posts.index')}}">Back</a>
     <div class="show">
 
 
@@ -11,9 +11,16 @@
 
     </div>
     <div>
-        <a class="text-blue-500" href="{{route('posts.index')}}">Back</a>
+       
+
           @if($post->owndBy(auth()->user()))
-        <a class="text-red-500" href="{{route('posts.delete',$post)}}">Delete</a>
+
+          <form action="{{route('posts.delete',$post)}}" method="POST">
+            @csrf
+            @method('DELETE')
+             <button class="bg-red-500 text-white py-1 px-3" type="submit">Delete</button>
+          </form>
+      
         @endif
         
     </div>

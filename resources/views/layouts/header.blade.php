@@ -13,11 +13,14 @@
         <li><a class="p-3" href="{{route('posts.create')}}">Create Post</a></li>
 
         <li><a class="p-3" href="{{route('dashboard')}}">Dashboard</a></li>
+           
+        <li>
 
-        <form class="p-3 inline" action="{{route('logout')}}" method="post">
-            @csrf
-           <button type="submit">Logout</button>
-         </form>
+          <form class="p-3 inline" action="{{route('logout')}}" method="post">
+              @csrf
+             <button class="bg-red-500 text-white py-1 px-3" type="submit">Logout</button>
+           </form>
+        </li>
         @endauth
 
       @guest
