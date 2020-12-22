@@ -31,6 +31,18 @@
       </div>
 
       <div class="mb-4">
+        <label class="sr-only" for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Choose a username" class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="{{old('username')}}">
+
+        @error('username')
+
+        <div class="text-red-500 mt-2 text-sm">
+         {{$message}}
+        </div>
+    @enderror
+      </div>
+
+      <div class="mb-4">
         <label class="sr-only" for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Password" class="bg-gray-100 border-2 w-full p-4 rounded-lg">
 
