@@ -21,7 +21,9 @@
             </div>
        {{$posts->links()}}
                 @else
-        <p>No posts</p>
+                <div class="w-6/12 bg-white p-6 rounded-lg">
+                    <p>No posts</p>
+                </div>
 
         @endif
 

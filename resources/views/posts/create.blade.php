@@ -20,9 +20,9 @@
                 <span>{{$message}}</span>
                 @enderror
             </div>
-            <div>
+            <div class="mb-4">
                 <label class="sr-only"  for="content">Content</label>
-                <textarea  class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('content') red  @enderror" name="content" id="content" cols="30"  rows="10" placeholder="Content">
+                <textarea placeholder="Write somwthing!" class="bg-gray-100 border-2 w-full p-4 rounded-lg   @error('content') red  @enderror" name="content" id="content" cols="30"  rows="10" >
                     {{old('content')}}
                   
                 </textarea>

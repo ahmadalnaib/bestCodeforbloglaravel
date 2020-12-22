@@ -11,7 +11,16 @@ class PostController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     * 
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth')->only('store');
+    }
+      
+
+
     public function index()
     {
         $posts=Post::latest()->paginate(10);
