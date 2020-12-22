@@ -13,15 +13,16 @@
     <div>
        
 
-          @if($post->owndBy(auth()->user()))
+          {{-- @if($post->owndBy(auth()->user())) --}}
+          @can('delete',$post)
 
           <form action="{{route('posts.delete',$post)}}" method="POST">
             @csrf
             @method('DELETE')
              <button class="bg-red-500 text-white py-1 px-3" type="submit">Delete</button>
           </form>
-      
-        @endif
+      @endcan
+        {{-- @endif --}}
         
     </div>
 @endsection
