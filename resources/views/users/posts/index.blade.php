@@ -3,7 +3,7 @@
 @section('content')
 
     <main>
-
+        <h1 class="text-lg font-medium mb-6">{{$user->name}} posts {{$posts->count()}}</h1>
         @if($posts->count())
             <div class="g">
                 @foreach($posts as $post)
@@ -18,9 +18,9 @@
 
                         <a class="bg-green-200 text-grey px-6 py-1 rounded font-medium " href="{{route('posts.show',$post)}}">Apply</a>
                          
-                        <div class="">
-                            <a class="font-bold" href="{{route('users.posts',$post->user)}}">{{$post->user->name}}</a>
-                        </div>
+                        <span class="text-gray-600">
+                          {{$post->user->name}}
+                        </span>
                     </div>
                     </div>
                 @endforeach
