@@ -8,4 +8,4 @@ const status=document.querySelector('.status');
 
 setTimeout(()=>{
   status.style.display="none";
-},2000)
+},4000)
