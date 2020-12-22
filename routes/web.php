@@ -30,12 +30,12 @@ Route::post('/login',[LoginController::class,'store']);
 
 
 
-Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
+Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware('auth');
 
  Route::prefix('/posts')->group((function(){
 
      Route::get('/',[PostController::class,'index'])->name('posts.index');
-     Route::get('/create',[PostController::class,'create'])->name('posts.create');
+     Route::get('/create',[PostController::class,'create'])->name('posts.create')->middleware('auth');;
      Route::get('/{post}',[PostController::class,'show'])->name('posts.show');
      Route::post('/',[PostController::class,'store'])->name('posts.store');
 
