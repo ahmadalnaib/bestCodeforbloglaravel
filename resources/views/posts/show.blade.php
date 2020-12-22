@@ -11,6 +11,10 @@
 
     </div>
     <div>
-        <a class="btn1" href="{{route('posts.index')}}">Back</a>
+        <a class="text-blue-500" href="{{route('posts.index')}}">Back</a>
+          @if($post->owndBy(auth()->user()))
+        <a class="text-red-500" href="{{route('posts.delete',$post)}}">Delete</a>
+        @endif
+        
     </div>
 @endsection

@@ -85,7 +85,11 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        $post->delete();
+        return  redirect()
+        ->route('posts.index')
+        ->with('status','post has been deleted');
+        
     }
 
     /**
@@ -108,6 +112,6 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        
     }
 }
